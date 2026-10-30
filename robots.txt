@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kubeai.info/sitemap.xml
