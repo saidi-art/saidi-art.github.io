@@ -23,56 +23,289 @@
   "description": "KubeAI builds AI-assisted products and services."
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#e8e6e1;--dim:#9a978f;--accent:#D4B48C;--bg:#111113;--card:#18181b;--line:#2a2a2e}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;min-height:100vh;display:flex;flex-direction:column}
-main{max-width:680px;margin:0 auto;padding:72px 24px 48px;width:100%;flex:1}
-h1{font-size:28px;letter-spacing:-0.02em;font-weight:700}
-h1 span{color:var(--accent)}
-.lede{margin:14px 0 40px;font-size:18px;color:var(--dim)}
-h2{font-size:13px;text-transform:uppercase;letter-spacing:0.12em;color:var(--dim);font-weight:600;margin-bottom:14px}
-ul{list-style:none}
-li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:12px}
-li a{color:var(--accent);text-decoration:none;font-weight:600}
-li a:hover{text-decoration:underline}
-li p{margin-top:6px;color:var(--dim);font-size:15px}
-.contact{margin-top:40px}
-.contact a{color:var(--accent);text-decoration:none}
-.contact a:hover{text-decoration:underline}
-footer{max-width:680px;margin:0 auto;width:100%;padding:24px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
-a{color:var(--accent)}
+body{margin:0;background:#0E0E10}
+a{color:#D9B26A}a:hover{color:#F0CF8E}
+:root{--k-orb:radial-gradient(circle at 34% 30%, oklch(0.93 0.06 317.4), oklch(0.68 0.19 317.4) 55%, oklch(0.45 0.16 317.4) 100%)}
+@keyframes kspin{from{transform:rotateX(-22deg) rotateY(0deg)}to{transform:rotateX(-22deg) rotateY(360deg)}}
+@keyframes kbreathe{0%,100%{opacity:.35}50%{opacity:.7}}
+.kcube{animation:kspin 28s linear infinite}
+.kstage:hover .kcube{animation-play-state:paused}
+.kcard{transition:transform .25s ease,border-color .25s ease}
+.kcard:hover{transform:translateY(-4px);border-color:#D9B26A !important}
+.kglow{animation:kbreathe 6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.kcube,.kglow{animation:none}}
 </style>
+<style>html{background:#0E0E10} body{margin:0}</style>
 </head>
 <body>
-<main>
-  <h1>KubeAI<span>.</span></h1>
-  <p class="lede">KubeAI builds AI-assisted products and services.</p>
-  <h2>Current work</h2>
-  <ul>
-    <li>
-      <a href="https://publications.kubeai.info">Publications</a>
-      <p>Two free monthly magazines: SMB AI Accelerator, the practical read for owners of small firms, and AI Business Advantage, the strategic read for AI consultants. Every figure is sourced.</p>
-    </li>
-    <li>
-      <a href="https://play.kubeai.info">12 Play Testers</a>
-      <p>We run Google Play's required 12-tester, 14-day closed test for Android apps, with real people on real devices.</p>
-    </li>
-    <li>
-      <a href="https://scrollrsi.kubeai.info">ScrollRSI</a>
-      <p>Save what you're reading on your phone. On-device OCR, nothing leaves your phone. Coming soon to Google Play.</p>
-    </li>
-    <li>
-      <a href="https://sphere.kubeai.info">Sphere</a>
-      <p>A floating capture tool for Android. Tap the sphere to record, drag it to the bottom bar to auto-scroll and read hands-free. Everything stays on your phone.</p>
-    </li>
-    <li>
-      <a href="https://www.youtube.com/@KubeAI">Visual Encyclopedia on YouTube</a>
-      <p>A map of future pathways for students deciding what to do with their lives.</p>
-    </li>
-  </ul>
-  <p class="contact">Say hello: <a href="mailto:saidi@kubeai.info">saidi@kubeai.info</a></p>
-</main>
-<footer>&copy; 2026 KubeAI</footer>
+<div style="container-type: inline-size; width: 100%; min-height: 100vh; background: #0E0E10; color: #EDEBE6; font-family: 'Schibsted Grotesk', system-ui, sans-serif; overflow-x: hidden">
+
+  <header style="max-width: 1240px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+    <a href="https://kubeai.info" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #EDEBE6">
+      <svg width="26" height="28" viewBox="0 0 26 28" aria-hidden="true"><path d="M13 1 25 7.5v13L13 27 1 20.5v-13Z" fill="none" stroke="#EDEBE6" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5 13 14l12-6.5M13 14v13" fill="none" stroke="#D9B26A" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span style="font-size: 22px; font-weight: 800; letter-spacing: -0.02em">KubeAI<span style="color: #D9B26A">.</span></span>
+    </a>
+    <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 22px; font-size: 15px">
+      <a href="#work" style="color: #C9C6BF; text-decoration: none; padding: 12px 0">Work</a>
+      <a href="https://publications.kubeai.info" style="color: #C9C6BF; text-decoration: none; padding: 12px 0">Magazines</a>
+      <a href="https://www.youtube.com/@KubeAI" style="color: #C9C6BF; text-decoration: none; padding: 12px 0">YouTube</a>
+      <a href="mailto:saidi@kubeai.info" style="color: #0E0E10; background: #D9B26A; text-decoration: none; font-weight: 600; padding: 12px 18px; border-radius: 999px">Say hello</a>
+    </nav>
+  </header>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 56px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
+    <div style="flex: 1 1 520px; min-width: 0">
+      <p style="margin: 0 0 22px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A3A09A">Independent AI studio · Paris time</p>
+      <h1 style="margin: 0; font-size: clamp(46px, 7.4cqi, 104px); line-height: 0.95; font-weight: 800; letter-spacing: -0.035em">Six products.<br><span style="color: #D9B26A">One cube.</span></h1>
+      <p style="margin: 28px 0 0; max-width: 560px; font-size: clamp(17px, 1.6cqi, 21px); line-height: 1.55; color: #C9C6BF">KubeAI builds small, sharp AI-assisted products and services. Apps that keep your data on your phone, magazines where every figure is sourced, and testing done by real people on real devices.</p>
+      <div style="margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px">
+        <a href="#work" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #EDEBE6; color: #0E0E10; text-decoration: none; font-weight: 700; font-size: 16px">Turn the cube
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M3 9l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="mailto:saidi@kubeai.info" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1px solid #3A3A40; color: #EDEBE6; text-decoration: none; font-weight: 500; font-size: 16px">saidi@kubeai.info</a>
+      </div>
+    </div>
+
+    <div class="kstage" aria-hidden="true" style="flex: 1 1 340px; min-width: 0; height: 420px; display: flex; align-items: center; justify-content: center; position: relative; perspective: 1100px">
+      <div class="kglow" style="position: absolute; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(217,178,106,0.28), rgba(217,178,106,0) 65%)"></div>
+      <div class="kcube" style="position: relative; width: 220px; height: 220px; transform-style: preserve-3d">
+        <div style="position: absolute; inset: 0; transform: rotateY(0deg) translateZ(110px); background: #F7F3EA; color: #1F1A4A; border: 1px solid rgba(255,255,255,0.15); display: flex; flex-direction: column; justify-content: space-between; padding: 18px; box-sizing: border-box">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px">01</span>
+          <span style="font-family: 'Instrument Serif', serif; font-size: 30px; line-height: 1">Publi&shy;cations</span>
+        </div>
+        <div style="position: absolute; inset: 0; transform: rotateY(90deg) translateZ(110px); background: #1B6B48; color: #F2F7F3; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; box-sizing: border-box">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px">02</span>
+          <div id="k-mini" style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px"></div>
+          <span style="font-weight: 800; font-size: 26px; line-height: 1">12 Play Testers</span>
+        </div>
+        <div style="position: absolute; inset: 0; transform: rotateY(180deg) translateZ(110px); background: #15130F; color: #EFE6D2; border: 1px solid #3A3328; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; box-sizing: border-box">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px">03</span>
+          <span style="font-family: 'Instrument Serif', serif; font-size: 34px; line-height: 1">Scroll<em style="color: #C9A46A">RSI</em></span>
+        </div>
+        <div style="position: absolute; inset: 0; transform: rotateY(270deg) translateZ(110px); background: #FFFFFF; color: #17171A; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; padding: 18px; box-sizing: border-box">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px">04</span>
+          <span style="align-self: center; width: 84px; height: 84px; border-radius: 50%; background: var(--k-orb)"></span>
+          <span style="font-weight: 700; font-size: 28px; line-height: 1">Sphere</span>
+        </div>
+        <div style="position: absolute; inset: 0; transform: rotateX(90deg) translateZ(110px); background: #EFE9DC; color: #2B3A55; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; box-sizing: border-box">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px">05</span>
+          <span style="font-family: 'Caveat', cursive; font-size: 34px; line-height: 1">Visual Encyclopedia</span>
+        </div>
+        <div style="position: absolute; inset: 0; transform: rotateX(-90deg) translateZ(110px); background: #D9B26A; color: #0E0E10; display: flex; flex-direction: column; justify-content: space-between; padding: 18px; box-sizing: border-box">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px">06</span>
+          <span style="font-weight: 800; font-size: 26px; line-height: 1">Work with KubeAI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Now" style="border-top: 1px solid #26262B; border-bottom: 1px solid #26262B; background: #121215">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; font-size: 14px; color: #C9C6BF">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #D9B26A">NOW</span>
+      <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #4CC38A"></span>October 2026 issues are out</span>
+      <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #4CC38A"></span>12 Play Testers is taking new apps</span>
+      <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #E0A040"></span>ScrollRSI and Sphere: Google Play waitlists open</span>
+      <span style="display: inline-flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #4CC38A"></span>Visual Encyclopedia: 6 seasons, 137 videos</span>
+    </div>
+  </section>
+
+  <section id="work" style="max-width: 1240px; margin: 0 auto; padding: 88px 24px 40px">
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 36px">
+      <h2 style="margin: 0; font-size: clamp(34px, 4.4cqi, 58px); line-height: 1; font-weight: 800; letter-spacing: -0.03em">Every face, its own world.</h2>
+      <p style="margin: 0; max-width: 420px; font-size: 16px; line-height: 1.55; color: #A3A09A">Each product has its own site and its own look. This is the front door to all of them.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px">
+
+      <a class="kcard" href="https://publications.kubeai.info" style="display: flex; flex-direction: column; text-decoration: none; color: #EDEBE6; background: #17171A; border: 1px solid #2A2A2F; border-radius: 18px; overflow: hidden">
+        <div style="height: 220px; background: #F7F3EA; display: flex; align-items: center; justify-content: center; gap: 18px; padding: 20px; box-sizing: border-box">
+          <div style="width: 118px; height: 160px; background: #2B2668; color: #F7F3EA; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; transform: rotate(-5deg); box-shadow: 0 10px 24px rgba(31,26,74,0.3)">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #E6C25A">OCT 2026</span>
+            <span style="font-family: 'Instrument Serif', serif; font-size: 21px; line-height: 1.02">SMB AI Accel&shy;erator</span>
+          </div>
+          <div style="width: 118px; height: 160px; background: #0F1F3A; color: #F7F3EA; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; transform: rotate(4deg); box-shadow: 0 10px 24px rgba(15,31,58,0.3)">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #E6C25A">OCT 2026</span>
+            <span style="font-family: 'Instrument Serif', serif; font-size: 21px; line-height: 1.02">AI Business Advantage</span>
+          </div>
+        </div>
+        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A3A09A">01 · MAGAZINES</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.01em">Publications</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9C6BF">Two free monthly reads: SMB AI Accelerator for owners of small firms, AI Business Advantage for AI consultants. Every figure sourced.</p>
+          <span style="margin-top: auto; padding-top: 10px; font-size: 14px; color: #D9B26A">publications.kubeai.info →</span>
+        </div>
+      </a>
+
+      <a class="kcard" href="https://play.kubeai.info" style="display: flex; flex-direction: column; text-decoration: none; color: #EDEBE6; background: #17171A; border: 1px solid #2A2A2F; border-radius: 18px; overflow: hidden">
+        <div style="height: 220px; background: #F2F2EE; padding: 22px 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 10px">
+          <div id="k-cells" style="display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); grid-template-rows: repeat(12, minmax(0, 1fr)); gap: 2px; flex: 1 1 auto; min-height: 0"></div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #3B4A44">12 testers · day 8 of 14</span>
+        </div>
+        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A3A09A">02 · SERVICE</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.01em">12 Play Testers</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9C6BF">Google Play's 12-tester, 14-day closed test, run for you by real people on real Android phones. Flat one-time fee per app.</p>
+          <span style="margin-top: auto; padding-top: 10px; font-size: 14px; color: #D9B26A">play.kubeai.info →</span>
+        </div>
+      </a>
+
+      <a class="kcard" href="https://scrollrsi.kubeai.info" style="display: flex; flex-direction: column; text-decoration: none; color: #EDEBE6; background: #17171A; border: 1px solid #2A2A2F; border-radius: 18px; overflow: hidden">
+        <div style="height: 220px; background: #15130F; padding: 22px 26px; box-sizing: border-box; display: flex; align-items: center; gap: 18px">
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 7px">
+            <span style="height: 7px; width: 92%; border-radius: 4px; background: #3A3328"></span>
+            <span style="height: 7px; width: 70%; border-radius: 4px; background: #3A3328"></span>
+            <span style="height: 7px; width: 84%; border-radius: 4px; background: #4A4033"></span>
+            <span style="height: 7px; width: 60%; border-radius: 4px; background: #4A4033"></span>
+            <span style="height: 7px; width: 88%; border-radius: 4px; background: #5E5140"></span>
+            <span style="height: 7px; width: 74%; border-radius: 4px; background: #5E5140"></span>
+            <span style="height: 7px; width: 80%; border-radius: 4px; background: #7A6A50"></span>
+          </div>
+          <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11h14M13 6l5 5-5 5" fill="none" stroke="#C9A46A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div style="width: 96px; height: 120px; border: 1px solid #C9A46A; border-radius: 8px; padding: 10px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #EFE6D2; line-height: 1.5">Day 1 …<br>Day 2 …<br>Day 3 …</span>
+            <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 18px; color: #C9A46A">thread.txt</span>
+          </div>
+        </div>
+        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A3A09A">03 · ANDROID APP · COMING SOON</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.01em">ScrollRSI</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9C6BF">If you can scroll it, you can save it. Any long thread becomes one clean text file, read on your phone. No internet permission.</p>
+          <span style="margin-top: auto; padding-top: 10px; font-size: 14px; color: #D9B26A">scrollrsi.kubeai.info →</span>
+        </div>
+      </a>
+
+      <a class="kcard" href="https://sphere.kubeai.info" style="display: flex; flex-direction: column; text-decoration: none; color: #EDEBE6; background: #17171A; border: 1px solid #2A2A2F; border-radius: 18px; overflow: hidden">
+        <div style="height: 220px; background: #FFFFFF; padding: 22px 26px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+          <span style="width: 120px; height: 120px; border-radius: 50%; background: var(--k-orb); box-shadow: 0 14px 30px rgba(0,0,0,0.18)"></span>
+          <div style="display: flex; flex-direction: column; gap: 6px; text-align: right">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #555; letter-spacing: 0.1em">TODAY'S SPHERE</span>
+            <span id="k-day" style="font-size: 30px; font-weight: 700; color: #17171A">Day 306</span>
+            <span id="k-hue" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #555">hue 317.4°</span>
+          </div>
+        </div>
+        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A3A09A">04 · ANDROID APP · WAITLIST</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.01em">Sphere</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9C6BF">Capture here, switch, drop there. A floating sphere that records, auto-scrolls and carries text between apps. New colour every day.</p>
+          <span style="margin-top: auto; padding-top: 10px; font-size: 14px; color: #D9B26A">sphere.kubeai.info →</span>
+        </div>
+      </a>
+
+      <a class="kcard" href="https://www.youtube.com/@KubeAI" style="display: flex; flex-direction: column; text-decoration: none; color: #EDEBE6; background: #17171A; border: 1px solid #2A2A2F; border-radius: 18px; overflow: hidden">
+        <div style="height: 220px; background-color: #EFE9DC; background-image: linear-gradient(#DCD3BF 1px, transparent 1px), linear-gradient(90deg, #DCD3BF 1px, transparent 1px); background-size: 22px 22px; padding: 20px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-content: center; gap: 8px">
+          <span style="font-family: 'Caveat', cursive; font-size: 21px; color: #2B3A55; background: #FBF8F1; border: 1px solid #B9AE95; padding: 2px 10px; transform: rotate(1.5deg)">S2 Explorers &amp; Protectors</span>
+          <span style="font-family: 'Caveat', cursive; font-size: 21px; color: #2B3A55; background: #FBF8F1; border: 1px solid #B9AE95; padding: 2px 10px; transform: rotate(-1deg)">S3 Creators &amp; Visionaries</span>
+          <span style="font-family: 'Caveat', cursive; font-size: 21px; color: #2B3A55; background: #FBF8F1; border: 1px solid #B9AE95; padding: 2px 10px; transform: rotate(2deg)">S4 Thinkers &amp; Analyzers</span>
+          <span style="font-family: 'Caveat', cursive; font-size: 21px; color: #2B3A55; background: #FBF8F1; border: 1px solid #B9AE95; padding: 2px 10px; transform: rotate(-2deg)">S5 Strategists &amp; Leaders</span>
+          <span style="font-family: 'Caveat', cursive; font-size: 21px; color: #2B3A55; background: #FBF8F1; border: 1px solid #B9AE95; padding: 2px 10px; transform: rotate(1deg)">S6 Movers &amp; Healers</span>
+        </div>
+        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A3A09A">05 · YOUTUBE · 137 VIDEOS</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.01em">Visual Encyclopedia</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #C9C6BF">A hand-drawn map of future pathways for students deciding what to do with their lives, one field of study at a time.</p>
+          <span style="margin-top: auto; padding-top: 10px; font-size: 14px; color: #D9B26A">youtube.com/@KubeAI →</span>
+        </div>
+      </a>
+
+      <a class="kcard" href="mailto:saidi@kubeai.info?subject=Working%20with%20KubeAI" style="display: flex; flex-direction: column; text-decoration: none; color: #0E0E10; background: #D9B26A; border: 1px solid #D9B26A; border-radius: 18px; overflow: hidden">
+        <div style="height: 220px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; gap: 12px; border-bottom: 1px solid rgba(14,14,16,0.18)">
+          <span style="display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 600"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5 9 16l9-10" fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>AI governance</span>
+          <span style="display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 600"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5 9 16l9-10" fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Data readiness</span>
+          <span style="display: flex; align-items: center; gap: 12px; font-size: 19px; font-weight: 600"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 11.5 9 16l9-10" fill="none" stroke="#0E0E10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Shipping your first AI tool</span>
+        </div>
+        <div style="padding: 22px 24px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1">
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #3A2E14">06 · ADVISORY</span>
+          <h3 style="margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -0.01em">Work with KubeAI</h3>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #2A2310">Advisory support for small firms getting their governance and data ready for AI. One conversation to start.</p>
+          <span style="margin-top: auto; padding-top: 10px; font-size: 14px; font-weight: 700">Start a conversation →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 72px 24px">
+    <p style="margin: 0 0 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A3A09A">How every face is built</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 0; border-top: 1px solid #2A2A2F">
+      <div style="padding: 28px 28px 28px 0; border-bottom: 1px solid #2A2A2F">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9B26A">A</span>
+        <h3 style="margin: 12px 0 10px; font-size: 26px; font-weight: 700; letter-spacing: -0.01em">On the device</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #A3A09A">Our apps read on your phone. Nothing is uploaded, no ads, no tracking.</p>
+      </div>
+      <div style="padding: 28px 28px 28px 0; border-bottom: 1px solid #2A2A2F">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9B26A">B</span>
+        <h3 style="margin: 12px 0 10px; font-size: 26px; font-weight: 700; letter-spacing: -0.01em">Every figure sourced</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #A3A09A">If we print a number, you can check where it came from.</p>
+      </div>
+      <div style="padding: 28px 28px 28px 0; border-bottom: 1px solid #2A2A2F">
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #D9B26A">C</span>
+        <h3 style="margin: 12px 0 10px; font-size: 26px; font-weight: 700; letter-spacing: -0.01em">Real people</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #A3A09A">Real testers, real devices, and a real person reading your email.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1240px; margin: 0 auto; padding: 24px 24px 96px">
+    <div style="border-radius: 24px; background: #17171A; border: 1px solid #2A2A2F; padding: clamp(32px, 5cqi, 72px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 28px">
+      <h2 style="margin: 0; flex: 1 1 480px; font-size: clamp(32px, 4.6cqi, 64px); line-height: 1.02; font-weight: 800; letter-spacing: -0.03em">Have an app, a question or an idea?</h2>
+      <a href="mailto:saidi@kubeai.info" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #D9B26A; color: #0E0E10; text-decoration: none; font-weight: 700; font-size: 17px">saidi@kubeai.info</a>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #26262B">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 28px 24px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 32px; font-size: 14px; color: #A3A09A">
+      <span>© 2026 KubeAI</span>
+      <nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 8px 22px">
+        <a href="https://publications.kubeai.info" style="color: #C9C6BF">Publications</a>
+        <a href="https://play.kubeai.info" style="color: #C9C6BF">12 Play Testers</a>
+        <a href="https://scrollrsi.kubeai.info" style="color: #C9C6BF">ScrollRSI</a>
+        <a href="https://sphere.kubeai.info" style="color: #C9C6BF">Sphere</a>
+        <a href="https://www.youtube.com/@KubeAI" style="color: #C9C6BF">YouTube</a>
+        <a href="https://play.kubeai.info" style="color: #C9C6BF">For agents: API · MCP</a>
+      </nav>
+    </div>
+  </footer>
+
+</div>
+<script>
+(function () {
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 0);
+  var day = Math.floor((now - start) / 86400000);
+  var hue = (day * 137.50776) % 360;
+  var orb = 'radial-gradient(circle at 34% 30%, oklch(0.93 0.06 ' + hue + '), oklch(0.68 0.19 ' + hue + ') 55%, oklch(0.45 0.16 ' + hue + ') 100%)';
+  document.documentElement.style.setProperty('--k-orb', orb);
+  var d = document.getElementById('k-day');
+  if (d) d.textContent = 'Day ' + day;
+  var h = document.getElementById('k-hue');
+  if (h) h.textContent = 'hue ' + hue.toFixed(1) + '\u00b0';
+  function cell(parent, bg, aspect) {
+    var s = document.createElement('span');
+    s.style.borderRadius = '2px';
+    if (aspect) s.style.aspectRatio = '1';
+    s.style.background = bg;
+    parent.appendChild(s);
+  }
+  var cells = document.getElementById('k-cells');
+  if (cells) {
+    for (var r = 1; r <= 12; r++) {
+      for (var c = 1; c <= 14; c++) {
+        var bg = '#DCDCD6';
+        if (c <= 8) bg = '#1B7A50';
+        if ((r === 3 && c === 7) || (r === 7 && c === 4)) bg = '#D9922E';
+        cell(cells, bg, false);
+      }
+    }
+  }
+  var mini = document.getElementById('k-mini');
+  if (mini) {
+    for (var i = 0; i < 28; i++) {
+      cell(mini, (i % 7) < 4 ? '#7FD3A8' : 'rgba(255,255,255,0.18)', true);
+    }
+  }
+})();
+</script>
 </body>
 </html>
